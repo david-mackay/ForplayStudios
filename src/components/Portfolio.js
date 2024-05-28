@@ -91,9 +91,11 @@ const ProjectLink = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   align-self: flex-end;  // Align the button to the bottom of the content
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &:hover {
-    background: #ff4500;
+    background: #ffffff;
+    color: #ff6347;
   }
 `;
 

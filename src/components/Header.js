@@ -7,14 +7,19 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: ${(props) => (props.transparent ? 'transparent' : '#2f2f2f')};
+  background: transparent;
   color: #e0e0e0;
-  box-shadow: ${(props) => (props.transparent ? 'none' : '0 2px 4px rgba(0, 0, 0, 0.1)')};
-  position: ${(props) => (props.transparent ? 'absolute' : 'fixed')};
+  box-shadow: none;
+  position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 1000; /* Ensure the header is on top */
   box-sizing: border-box;
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  // Smooth transition for background and box-shadow
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+`;
+
+const Logo = styled.h1`
+  color: #ff6347;
+  font-family: 'Playfair Display', serif;
 `;
 
 const Nav = styled.nav`
@@ -28,7 +33,7 @@ const StyledLink = styled(Link)`
   font-weight: bold;
   position: relative;
   padding-bottom: 2px;
-  transition: color 0.3s ease-in-out;  // Smooth transition for color
+  transition: color 0.3s ease-in-out;
 
   &:hover {
     color: #ff6347;
@@ -42,7 +47,7 @@ const StyledLink = styled(Link)`
     width: ${(props) => (props.active ? '100%' : '0')};
     height: 2px;
     background: #ff6347;
-    transition: width 0.3s ease-in-out;  // Smooth transition for underline
+    transition: width 0.3s ease-in-out;
   }
 
   &:hover::after {
@@ -52,11 +57,10 @@ const StyledLink = styled(Link)`
 
 const Header = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
 
   return (
-    <HeaderWrapper transparent={isHomePage}>
-      <h1 style={{ color: '#ff6347' }}>ForPlayStudios</h1>
+    <HeaderWrapper>
+      <Logo>ForPlayStudios</Logo>
       <Nav>
         <StyledLink to="/" active={location.pathname === '/'}>Home</StyledLink>
         <StyledLink to="/portfolio" active={location.pathname === '/portfolio'}>Portfolio</StyledLink>
