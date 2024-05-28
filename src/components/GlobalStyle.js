@@ -1,36 +1,48 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
+    box-sizing: border-box;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Merriweather', serif;
+    padding-top: 70px; /* Adjust based on the header height */
     background-color: #1c1c1c;
     color: #e0e0e0;
   }
 
-  h1, h2 {
-    font-family: 'Roboto', sans-serif;
-    color: #a52a2a;
-  }
-
   a {
-    color: #a52a2a;
     text-decoration: none;
-
-    &:hover {
-      color: #ff6347;
-    }
+    color: inherit;
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  ul, li {
+    list-style: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .slide-in {
+    animation: slideIn 0.5s ease-in-out;
   }
 `;
 

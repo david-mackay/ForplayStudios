@@ -11,18 +11,32 @@ const PortfolioWrapper = styled.div`
   background: #1c1c1c;
   color: #e0e0e0;
   min-height: 100vh;  // Ensure it takes the full height if content is less
+
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
 `;
 
 const Title = styled.h1`
   text-align: center;
   margin-bottom: 40px;
   color: #ff6347;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
 `;
 
 const Description = styled.p`
   text-align: center;
   margin-bottom: 40px;
   color: #e0e0e0;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
 `;
 
 const ProjectGrid = styled.div`
@@ -32,6 +46,11 @@ const ProjectGrid = styled.div`
   width: 100%;  // Ensure the grid takes full width
   max-width: 1200px;  // Optional: limit the maximum width of the grid
   justify-content: center;  // Center the grid content
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 `;
 
 const ProjectCard = styled.div`
@@ -50,12 +69,20 @@ const ProjectCard = styled.div`
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 const ProjectImageWrapper = styled.div`
   width: 100%;
   height: 70%;  // Make the image take up 70% of the card
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -70,16 +97,30 @@ const ProjectContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;  // Ensure the content is spaced within the card
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 10px;
+  }
 `;
 
 const ProjectTitle = styled.h2`
   margin-bottom: 10px;
   color: #ff6347;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const ProjectDescription = styled.p`
   margin-bottom: 10px;
   flex-grow: 1;  // Allow the description to take the available space
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
 `;
 
 const ProjectLink = styled(Link)`
@@ -96,6 +137,12 @@ const ProjectLink = styled(Link)`
   &:hover {
     background: #ffffff;
     color: #ff6347;
+  }
+
+  @media (max-width: 768px) {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    align-self: center;
   }
 `;
 
