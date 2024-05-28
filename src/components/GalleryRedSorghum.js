@@ -78,11 +78,13 @@ const GalleryRedSorghum = () => {
     setIsPopupOpen(false);
   };
 
+  // List of images in the public/redsorghum folder
   const images = [
-    "https://i.imgur.com/xM6Nojg.jpg",
-    "https://i.imgur.com/l69aXfs.png",
-    "https://i.imgur.com/dAxJbUs.png",
-    "https://i.imgur.com/yTTGXRM.png"
+    "redsorghum/image1.jpg",
+    "redsorghum/image2.jpg",
+    "redsorghum/image3.jpg",
+    "redsorghum/image4.jpg",
+    "redsorghum/image5.jpg",
   ];
 
   return (
@@ -92,11 +94,11 @@ const GalleryRedSorghum = () => {
         <GalleryGrid>
           {images.map((img, index) => (
             <ImgContainer key={index} onClick={() => openPopup(img)}>
-              <ImgWrapper style={{ backgroundImage: `url(${img})` }} />
+              <ImgWrapper style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/${img})` }} />
             </ImgContainer>
           ))}
         </GalleryGrid>
-        <Popup isOpen={isPopupOpen} style={{ backgroundImage: `url(${popupImage})` }} onClick={closePopup} />
+        <Popup isOpen={isPopupOpen} style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/${popupImage})` }} onClick={closePopup} />
       </GalleryWrapper>
     </>
   );
