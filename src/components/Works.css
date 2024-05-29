@@ -1,0 +1,48 @@
+.works {
+    padding: 80px 20px; /* Adjust padding to match your layout */
+    text-align: center;
+    background-color: #fdf5e6; /* Bone white background */
+  }
+  
+  .header-section {
+    margin-bottom: 40px;
+  }
+  
+  .header-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .works-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .works-option {
+    flex: 1 1 30%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .works-option img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .works-option h2 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .works-option {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  

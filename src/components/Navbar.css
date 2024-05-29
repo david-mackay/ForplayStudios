@@ -1,0 +1,102 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    background: transparent;
+  }
+  
+  .navbar-logo img {
+    height: 60px;
+    cursor: pointer;
+  }
+  
+  .desktop-menu {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* Center the menu items horizontally */
+  }
+  
+  .desktop-menu a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .desktop-menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #333;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .desktop-menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .mobile-menu {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  /* Custom styles for the burger menu */
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 36px;
+  }
+  
+  .bm-burger-bars {
+    background: #333;
+  }
+  
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .bm-cross {
+    background: #bdc3c7;
+  }
+  
+  .bm-menu {
+    background: #fdf5e6; /* Bone white background */
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+  
+  .bm-item-list a {
+    padding: 0.5em;
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .bm-item-list a:hover {
+    color: #bdc3c7;
+  }
+  

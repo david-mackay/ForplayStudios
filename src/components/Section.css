@@ -1,0 +1,10 @@
+/* src/components/Section.css */
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+  }
+  
