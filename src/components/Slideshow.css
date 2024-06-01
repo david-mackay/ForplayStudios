@@ -3,7 +3,6 @@
     width: 100%;
     height: 200px; /* Adjust the height as needed */
     overflow: hidden;
-    border-radius: 8px;
   }
   
   .slide {
@@ -15,7 +14,7 @@
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: transform 1s ease-in-out, transform 1s ease-in-out;
+    transition: transform 1s ease;
     z-index: 0;
   }
   
@@ -32,7 +31,7 @@
   }
   
   .slide.next {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(100%);
     z-index: 0;
   }

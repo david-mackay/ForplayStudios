@@ -1,18 +1,3 @@
-.App {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  background-color: #fdf5e6; /* Bone white background */
-  min-height: 100vh; /* Ensure the app takes at least the full viewport height */
-}
-
-@media (max-width: 768px) {
-  .App {
-    padding-top: 60px; /* Adjust for the fixed navbar on smaller screens */
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -56,4 +41,10 @@
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding-top: 60px; /* Adjust for the fixed navbar on smaller screens */
+  }
 }

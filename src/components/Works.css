@@ -1,4 +1,5 @@
 .works {
+    width: 85vw;
     padding: 80px 20px; /* Adjust padding to match your layout */
     text-align: center;
     background-color: #fdf5e6; /* Bone white background */
@@ -11,38 +12,138 @@
   .header-section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-align: Left;
   }
   
-  .works-options {
+  .intro-section {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  .intro-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+  }
+  
+  .intro-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text p {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .intro-quote {
+    flex: 1;
+    text-align: right;
+    padding-left: 20px;
+  }
+  
+  .intro-quote blockquote {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+    quotes: '“' '”' '‘' '’';
+  }
+  
+  .intro-quote blockquote:before {
+    content: open-quote;
+  }
+  
+  .intro-quote blockquote:after {
+    content: close-quote;
+  }
+  
+  .intro-quote cite {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .works-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .works-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     gap: 20px;
   }
   
-  .works-option {
-    flex: 1 1 30%;
-    max-width: 300px;
-    text-align: center;
+  .works-section.left .slideshow-wrapper {
+    order: 1;
   }
   
-  .works-option img {
+  .works-section.left .work-text {
+    order: 2;
+  }
+  
+  .works-section.right .slideshow-wrapper {
+    order: 2;
+  }
+  
+  .works-section.right .work-text {
+    order: 1;
+  }
+  
+  .slideshow-wrapper {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Customize the height of the slideshow container */
   }
   
-  .works-option h2 {
+  .work-text {
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .work-text h2 {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #333;
   }
   
+  .work-text p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
   @media (max-width: 768px) {
-    .works-option {
-      flex: 1 1 100%;
-      max-width: 100%;
+    .intro-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .intro-text,
+    .intro-quote {
+      padding: 0;
+    }
+  
+    .works-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .works-section.left .work-text,
+    .works-section.right .work-text {
+      order: -1; /* Ensure text appears first */
+    }
+  
+    .works-section.left .slideshow-wrapper,
+    .works-section.right .slideshow-wrapper {
+      order: 1; /* Ensure slideshow appears second */
+    }
+  
+    .slideshow-wrapper {
+      height: 200px; /* Adjust height for smaller screens */
     }
   }
   

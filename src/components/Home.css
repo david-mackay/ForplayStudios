@@ -21,7 +21,7 @@
   }
   
   .slideshow-container {
-    height: 60vh; /* Confine the slideshow to a portion of the page */
+    height: 80vh; /* Confine the slideshow to a portion of the page */
     width: 60vw;
     display: flex;
     justify-content: center;
