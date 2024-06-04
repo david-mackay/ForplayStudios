@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Slideshow.css';
+import styles from './Slideshow.module.css'; // Import the CSS module
 
 const Slideshow = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,16 +15,16 @@ const Slideshow = ({ images }) => {
   }, [currentSlide, images.length]);
 
   return (
-    <div className="slideshow-container">
+    <div className={styles.slideshowContainer}>
       {images.map((slideImage, index) => (
         <div
           key={index}
-          className={`slide ${
+          className={`${styles.slide} ${
             index === currentSlide
-              ? 'current'
+              ? styles.current
               : index === previousSlide
-              ? 'previous'
-              : 'next'
+              ? styles.previous
+              : styles.next
           }`}
           style={{ backgroundImage: `url(${slideImage})` }}
         ></div>

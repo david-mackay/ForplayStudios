@@ -1,3 +1,5 @@
+/* GlobalStyles.module.css */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -7,7 +9,7 @@
   }
 }
 
-.fade-in {
+.fadeIn {
   animation: fadeIn 2.5s ease-in-out;
 }
 
@@ -20,7 +22,7 @@
   }
 }
 
-.logo-overlay {
+.logoOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -35,7 +37,7 @@
   animation-delay: 2.5s;
 }
 
-.logo-overlay img {
+.logoOverlay img {
   width: 300px; /* Adjust the size of the logo as needed */
 }
 

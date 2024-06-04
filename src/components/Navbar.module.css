@@ -1,0 +1,143 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  background: #fdf5e679;
+  transition: top 0.3s, background-color 0.3s;
+}
+
+.hidden {
+  top: -100px; /* Hide navbar by moving it off the top */
+}
+
+.visible {
+  top: 0;
+}
+
+.navbarLogo img {
+  height: 80px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+  cursor: pointer;
+}
+
+.desktopMenu {
+  display: flex;
+  flex: 1;
+  justify-content: center; /* Center the menu items horizontally */
+}
+
+.menuItem {
+  color: #333;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.menuItem::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #333;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.menuItem:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.burgerMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.burgerIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Animation for burger to X */
+.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.fullScreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fdf5e679; /* Bone white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.fullScreenMenuContent {
+  text-align: center;
+}
+
+.fullScreenMenuItem {
+  display: block;
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.fullScreenMenuItem:hover {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: top 0.3s, background-color 0.3s;
+  }
+  .desktopMenu {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: block;
+  }
+}

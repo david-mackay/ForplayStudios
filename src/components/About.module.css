@@ -1,0 +1,155 @@
+/* General styles for all viewports */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background-color: #fdf5e6; /* Bone white background */
+  min-height: 60vh;
+  max-height: 80vh;
+  padding: 2vh 2vw; /* Add padding for spacing */
+  gap: 2vw;
+  margin-top: 80px; /* To ensure content starts below the navbar */
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.aboutContent {
+  max-width: 90vw;
+  max-height: 100vh;
+  width: 100%;
+  padding-top: 6vh; /* Add padding to push text down from the top */
+}
+
+.aboutSection {
+  margin-bottom: 2vh; /* Reduced space between text and stats section */
+}
+
+.aboutSection h2 {
+  font-size: 2rem;
+  margin-bottom: 2vh;
+  color: #333;
+}
+
+.aboutSection p {
+  font-size: 1rem;
+  margin-bottom: 2vh;
+  color: #666;
+}
+
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2vw;
+  margin-bottom: 2vh; /* Reduced space between stats and quote section */
+}
+
+.statItem {
+  text-align: left;
+}
+
+.statItem h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1vh;
+  color: #333;
+}
+
+.statItem p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.quoteSection {
+  text-align: center;
+  margin-top: 2vh; /* Reduced space before the quote section */
+}
+
+.quoteSection blockquote {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1vh;
+  quotes: '“' '”' '‘' '’';
+}
+
+.quoteSection blockquote:before {
+  content: open-quote;
+}
+
+.quoteSection blockquote:after {
+  content: close-quote;
+}
+
+.quoteSection cite {
+  font-size: 1rem;
+  color: #333;
+  display: block;
+  margin-top: 1vh;
+}
+
+.slideshowContainer {
+  margin-top: 2vh; /* Reduced space between text and slideshow */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 2vh 2vw; /* Adjust padding for smaller screens */
+  }
+
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .aboutContent {
+    max-width: 90vw;
+    max-height: 100vh;
+    width: 100%;
+    margin-top: 7vh; /* Add padding to push text down from the top */
+  }
+
+  .aboutSection h2 {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .aboutSection p {
+    font-size: 0.9rem; /* Smaller font size for smaller screens */
+  }
+
+  .statsSection {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 1vw; /* Smaller gap between items */
+  }
+
+  .statItem h3 {
+    font-size: 1.2rem; /* Smaller font size for smaller screens */
+  }
+
+  .statItem p {
+    font-size: 0.9rem; /* Smaller font size for smaller screens */
+  }
+
+  .quoteSection blockquote {
+    font-size: 1rem; /* Smaller font size for smaller screens */
+  }
+
+  .quoteSection cite {
+    font-size: 0.9rem; /* Smaller font size for smaller screens */
+  }
+
+  .slideshowContainer {
+    height: 20vh; /* Adjust height for smaller screens */
+    z-index: 0; /* Ensure slideshow is behind the content */
+    position: relative; /* To manage z-index properly */
+  }
+}

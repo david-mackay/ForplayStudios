@@ -1,0 +1,217 @@
+.slideshowBg {
+  height: 100vh;
+  width: 100vw;
+}
+
+.fullscreenSlideshow {
+  position: absolute; /* Change to absolute to take full viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind the content */
+  overflow: hidden;
+}
+
+.fullscreenSlideshow img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.works {
+  width: 85vw;
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fdf5e6; /* Bone white background */
+  margin: 0 auto; /* Center the works section */
+  position: relative; /* Ensure content is positioned relative to the background */
+  z-index: 1; /* Above the background */
+  margin-top: 100vh; /* Start content below the fullscreen slideshow */
+}
+
+.headerSection {
+  margin-bottom: 40px;
+}
+
+.headerSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.projectSection {
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the project section */
+  text-align: center; /* Ensure project section text is centered */
+}
+
+.projectSection h2 {
+  font-size: 1.1rem;
+  margin-bottom: 5%;
+}
+
+.projectDescription {
+  font-size: 0.9rem;
+  color: #333;
+  max-width: 20%; /* Set maximum width */
+  margin: auto; /* Center the description */
+}
+
+.gridGalleryContainer {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30vw;
+  height: 70vh;
+}
+
+.gridGallery {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.gridItem {
+  background-color: transparent; /* Placeholder background color */
+  overflow: hidden;
+}
+
+.gridItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Specific item styles to create the mosaic effect */
+.item-1 {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.item-2 {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.item-3 {
+  grid-column: span 3;
+  grid-row: span 4;
+}
+
+.item-4 {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.item-5 {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+/* Add more styles for additional items if needed */
+
+/* Add media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .slideshowBg {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .fullscreenSlideshow {
+    position: absolute; /* Change to absolute to take full viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind the content */
+    overflow: hidden;
+  }
+  
+  .fullscreenSlideshow img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .works {
+    padding: 20px;
+    margin-top: 100vh; /* Ensure content starts below the fullscreen slideshow on mobile */
+  }
+
+  .headerSection h1 {
+    font-size: 2rem;
+  }
+
+  .projectSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .projectDescription {
+    font-size: 1rem;
+    max-width: 90%; /* Make the description responsive on smaller screens */
+  }
+
+  .gridGalleryContainer {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    height: 70vh;
+  }
+  
+  .gridGallery {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  
+  .gridItem {
+    background-color: transparent; /* Placeholder background color */
+    overflow: hidden;
+  }
+  
+  .gridItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Specific item styles to create the mosaic effect */
+  .item-1 {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+
+  .item-2 {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+
+  .item-3 {
+    grid-column: span 3;
+    grid-row: span 4;
+  }
+
+  .item-4 {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+
+  .item-5 {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+}

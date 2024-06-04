@@ -7,7 +7,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import LogoOverlay from './components/LogoOverlay'; // Import the LogoOverlay component
 import './App.css';
-import './GlobalStyles.css'; // Import the global styles
+import './GlobalStyles.module.css'; // Import the global styles
 
 const App = () => {
   const [showOverlay, setShowOverlay] = useState(true);

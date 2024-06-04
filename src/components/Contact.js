@@ -1,34 +1,34 @@
 import React from 'react';
 import Section from './Section';
-import './Contact.css';
+import styles from './Contact.module.css'; // Import the CSS module
 
 const Contact = () => {
   return (
     <Section id="contact">
-      <div className="contact-content">
-        <div className="contact-section">
+      <div className={styles.contactContent}>
+        <div className={styles.contactSection}>
           <h2>Contact Us</h2>
           <p>
             We'd love to hear from you! Whether you have a question about our work, want to collaborate, or just want to say hello, feel free to reach out to us.
           </p>
         </div>
-        <div className="contact-info">
-          <div className="contact-item">
+        <div className={styles.contactInfo}>
+          <div className={styles.contactItem}>
             <h3>Email</h3>
             <p>contact@forplaystudio.com</p>
           </div>
-          <div className="contact-item">
+          <div className={styles.contactItem}>
             <h3>Phone</h3>
             <p>(123) 456-7890</p>
           </div>
-          <div className="contact-item">
+          <div className={styles.contactItem}>
             <h3>Address</h3>
             <p>1234 Studio Lane<br />Long Island City, NY 11101</p>
           </div>
         </div>
-        <div className="contact-form-section">
+        <div className={styles.contactFormSection}>
           <h3>Send Us a Message</h3>
-          <form className="contact-form">
+          <form className={styles.contactForm}>
             <label>
               Name
               <input type="text" name="name" required />

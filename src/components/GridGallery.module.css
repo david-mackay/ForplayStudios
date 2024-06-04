@@ -1,0 +1,52 @@
+.gridGallery {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gridItem {
+  background-color: transparent; /* Placeholder background color */
+  overflow: hidden;
+}
+
+.gridItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Specific item styles to create the mosaic effect */
+.item1 {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.item2 {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.item3 {
+  grid-column: span 3;
+  grid-row: span 4;
+}
+
+.item4 {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.item5 {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+/* Add more styles for additional items if needed */

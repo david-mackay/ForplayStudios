@@ -1,10 +1,9 @@
-// src/components/Section.js
 import React from 'react';
-import './Section.css';
+import styles from './Section.module.css'; // Import the CSS module
 
 const Section = ({ id, children }) => {
   return (
-    <div id={id} className="section">
+    <div id={id} className={styles.section}>
       {children}
     </div>
   );

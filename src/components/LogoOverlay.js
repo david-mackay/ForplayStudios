@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../GlobalStyles.css'; // Import the global styles
+import styles from '../GlobalStyles.module.css'; // Import the CSS module
 
 const LogoOverlay = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -13,7 +13,7 @@ const LogoOverlay = () => {
   }, []);
 
   return (
-    <div className={`logo-overlay ${!isVisible ? 'hidden' : ''}`}>
+    <div className={`${styles.logoOverlay} ${!isVisible ? styles.hidden : ''}`}>
       <img src="/ForPlayStudiosLogo.png" alt="For Play Studios Logo" />
     </div>
   );

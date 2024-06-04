@@ -1,0 +1,39 @@
+
+  .heroSection {
+    background-color: #fdf5e6; /* Bone white background */
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .heroSection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .heroSection p {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .slideshowContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .slideshowContainer {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+  }
+  
