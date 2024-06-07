@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Lora', serif; /* Use the new font */
   background-color: #fdf5e6; /* Bone white background */
+  width: 100vw;
 }
 
 @media (max-width: 768px) {

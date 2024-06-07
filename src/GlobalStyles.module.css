@@ -47,6 +47,6 @@
 
 @media (max-width: 768px) {
   .App {
-    padding-top: 60px; /* Adjust for the fixed navbar on smaller screens */
+    width: 100 vw;
   }
 }
