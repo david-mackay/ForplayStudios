@@ -3,9 +3,12 @@ import Slideshow from './Slideshow';
 import styles from './Home.module.css'; // Import the CSS module
 
 const homeImages = [
-  '/bluewillow/image1.jpg',
-  '/redsorghum/image2.jpg',
-  '/yesapothecary/image3.jpg',
+  '/bluewillow/landscapebluewillowsignindoors.jpg',
+  '/bluewillow/eatingareaangle.jpg',  
+  '/redsorghum/image3.jpg',
+  '/yesapothecary/landscapedecor.jpg',
+  '/yesapothecary/landscapeseatingareafromback.jpg',
+  // '/yesapothecary/verticalbooth.jpg'
 ];
 
 const Home = () => {

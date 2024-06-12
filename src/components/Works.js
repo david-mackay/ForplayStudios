@@ -1,7 +1,7 @@
 import React from 'react';
 import GridGallery from './GridGallery';
 import Slideshow from './Slideshow';
-import styles from './Works.module.css'; // Import the CSS module
+import styles from './Works.module.css'; 
 
 const blueWillowImages1 = [
   '/bluewillow/entrancelandscape.jpg',
@@ -75,6 +75,12 @@ const redSorghumImages4 = [
   '/redsorghum/image1.jpg',
 ];
 
+const portfolioImages = [
+  '/bluewillow/entrancelandscape.jpg',
+  '/yesapothecary/landscapedecor.jpg',
+  '/redsorghum/image4.jpg',
+]
+
 const projects = [
   {
     title: 'Blue Willow',
@@ -103,7 +109,7 @@ const Works = () => {
   return (
     <div className={styles.slideshowBg}>
       <div className={styles.fullscreenSlideshow}>
-        <Slideshow images={blueWillowImages1} />
+        <Slideshow images={portfolioImages} />
       </div>
       <div className={styles.works}>
         {projects.map((project, index) => (
