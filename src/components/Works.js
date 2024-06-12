@@ -79,7 +79,33 @@ const portfolioImages = [
   '/bluewillow/entrancelandscape.jpg',
   '/yesapothecary/landscapedecor.jpg',
   '/redsorghum/image4.jpg',
-]
+];
+
+const nomadImages1 = [
+  '/nomad/grand.jpg',
+  '/nomad/cashierhost.jpg',
+  '/nomad/openkitchen.jpg',
+];
+
+const nomadImages2 = [
+  '/nomad/openkitchen.jpg',
+  '/nomad/bar.jpg',
+  '/nomad/grand.jpg',
+];
+
+const nomadImages3 =[
+  '/nomad/bar.jpg',
+  '/nomad/entrance.jpg',
+  '/nomad/booth.jpg',
+  'nomad/mainbarandbooth.jpg',
+];
+
+const nomadImages4 = [
+  '/nomad/mainbarandbooth.jpg',
+  '/nomad/entrance.jpg',
+  '/nomad/cashierhost.jpg',
+];
+
 
 const projects = [
   {
@@ -96,6 +122,11 @@ const projects = [
     title: 'Red Sorghum',
     slideshows: [redSorghumImages1, redSorghumImages2, redSorghumImages3, redSorghumImages4],
     description: 'Red Sorghum is a Sichuan restaurant that offers a rich blend of traditional flavors with a modern twist.'
+  },
+  {
+    title: 'Nomad Tea Parlour',
+    slideshows: [nomadImages1, nomadImages2, nomadImages3, nomadImages4],
+    description: 'Nomad Tea Parlour is a chic modern Dim Sum parlour located in the Flatiron District of Manhattan.'
   }
 ];
 
