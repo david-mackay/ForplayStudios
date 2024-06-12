@@ -4,51 +4,51 @@ import Slideshow from './Slideshow';
 import styles from './Works.module.css'; // Import the CSS module
 
 const blueWillowImages1 = [
-  '/bluewillow/image1.jpg',
-  '/bluewillow/image2.jpg',
-  '/bluewillow/image3.jpg',
+  '/bluewillow/entrancelandscape.jpg',
+  '/bluewillow/landscapebigdiningroom.jpg',
+  '/bluewillow/landscapebluewillowsignindoors.jpg',
 ];
 
 const blueWillowImages2 = [
-  '/bluewillow/image4.jpg',
-  '/bluewillow/image5.jpg',
-  '/bluewillow/image6.jpg',
+  '/bluewillow/somediningroom.jpg',
+  '/bluewillow/showroomlandscape.jpg',
+  '/bluewillow/privatelandscape.jpg',
 ];
 
 const blueWillowImages3 = [
-  '/bluewillow/image7.jpg',
-  '/bluewillow/image8.jpg',
-  '/bluewillow/image9.jpg',
+  '/bluewillow/verticalcornerentrance.jpg',
+  '/bluewillow/bootheatingvertical.jpg',
+  '/bluewillow/tablesetvertical.jpg',
 ];
 
 const blueWillowImages4 = [
-  '/bluewillow/image10.jpg',
-  '/bluewillow/image11.jpg',
-  '/bluewillow/image12.jpg',
+  '/bluewillow/landscapebigdiningroom.jpg',
+  '/bluewillow/eatingarealandscape.jpg',
+  '/bluewillow/barlandscape.jpg',
 ];
 
 const yesApothecaryImages1 = [
-  '/yesapothecary/image1.jpg',
-  '/yesapothecary/image2.jpg',
-  '/yesapothecary/image3.jpg',
+  '/yesapothecary/landscapedecor.jpg',
+  '/yesapothecary/landscapeseatingareafromback.jpg',
+  '/yesapothecary/landscapebar.jpg',
 ];
 
 const yesApothecaryImages2 = [
-  '/yesapothecary/image4.jpg',
-  '/yesapothecary/image5.jpg',
-  '/yesapothecary/image6.jpg',
+  '/yesapothecary/verticalseatingcorner.jpg',
+  '/yesapothecary/verticaltableset.jpg',
+  '/yesapothecary/verticalprivateroom.jpg',
 ];
 
 const yesApothecaryImages3 = [
-  '/yesapothecary/image7.jpg',
-  '/yesapothecary/image8.jpg',
-  '/yesapothecary/image9.jpg',
+  '/yesapothecary/verticalbarangleclose.jpg',
+  '/yesapothecary/verticalbooth.jpg',
+  '/yesapothecary/verticalseatingarea.jpg',
 ];
 
 const yesApothecaryImages4 = [
-  '/yesapothecary/image10.jpg',
-  '/yesapothecary/image11.jpg',
-  '/yesapothecary/image12.jpg',
+  '/yesapothecary/verticalprivatehallway.jpg',
+  '/yesapothecary/verticalcocktaildressup.jpg',
+  '/yesapothecary/verticalpeep.jpg',
 ];
 
 const redSorghumImages1 = [
