@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GridGallery from './GridGallery';
 import Slideshow from './Slideshow';
 import styles from './Works.module.css'; 
@@ -110,21 +111,25 @@ const nomadImages4 = [
 const projects = [
   {
     title: 'Blue Willow',
+    link: '/blue-willow',
     slideshows: [blueWillowImages1, blueWillowImages2, blueWillowImages3, blueWillowImages4],
     description: 'Blue Willow is a Sichuan restaurant that offers a rich blend of traditional flavors with a modern twist.'
   },
   {
     title: 'Ye\'s Apothecary',
+    link: '/yes-apothecary',
     slideshows: [yesApothecaryImages1, yesApothecaryImages2, yesApothecaryImages3, yesApothecaryImages4],
     description: 'Ye\'s Apothecary is a Shanghai nostalgia speakeasy, providing an immersive experience that transports guests to a bygone era.'
   },
   {
     title: 'Red Sorghum',
+    link: '/red-sorghum',
     slideshows: [redSorghumImages1, redSorghumImages2, redSorghumImages3, redSorghumImages4],
     description: 'Red Sorghum is a Sichuan restaurant that offers a rich blend of traditional flavors with a modern twist.'
   },
   {
     title: 'Nomad Tea Parlour',
+    link: '/nomad-tea-parlour',
     slideshows: [nomadImages1, nomadImages2, nomadImages3, nomadImages4],
     description: 'Nomad Tea Parlour is a chic modern Dim Sum parlour located in the Flatiron District of Manhattan.'
   }
@@ -145,9 +150,11 @@ const Works = () => {
       <div className={styles.works}>
         {projects.map((project, index) => (
           <div key={index} className={styles.projectSection}>
-            <h2>{project.title}</h2>
-            <div className = {styles.gridGalleryContainer}>
-            <GridGallery components={createSlideshowComponents(project.slideshows)} />
+            <Link to={project.link} className={styles.projectLink}>
+              <h2>{project.title}</h2>
+            </Link>
+            <div className={styles.gridGalleryContainer}>
+              <GridGallery components={createSlideshowComponents(project.slideshows)} />
             </div>
             <p className={styles.projectDescription}>{project.description}</p>
           </div>
